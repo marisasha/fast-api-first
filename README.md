@@ -95,5 +95,4 @@ uvicorn src.main:app --reload
   - **src/university** - папка с бизнес логикой 
   - **src/database** - настроки postgresql
   - **src/main** - точка запуска проекта
-  - **src/router** - гланый маршрутизатор
-
+  - **src/router** - главный маршрутизатор
