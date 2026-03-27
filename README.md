@@ -1,4 +1,4 @@
-# KINOLOG 
+# UNIVERSITY 
 
 Веб приложение для просмотра данных из операций OLAP куба для таблицы студентов , курсов и успеваемости.
 
@@ -18,6 +18,8 @@ DB_PASSWORD= postgres // можно любой другой
 DB_HOST= localhost 
 DB_PORT= 5432
 DB_NAME= university // можно любое другое
+
+DATABASE_URL=postgresql+asyncpg://{имя пользователя бд}:{пароль от БД}@{используемый хост}:{используемый порт}/{название бд}
 ```
 
 2. Создать виртуальное окружение и скачать библиотеки из папки requirments
@@ -44,7 +46,7 @@ pip install -r requirements/requirements_linux.txt
 script_location = %(here)s/alembic
 prepend_sys_path = .
 path_separator = os
-sqlalchemy.url = postgresql://postgres:{ваш пароль от БД}@{используемый хост}:{используемый порт}/{название бд}
+sqlalchemy.url = postgresql://{имя пользователя бд}:{пароль от БД}@{используемый хост}:{используемый порт}/{название бд}
 [post_write_hooks]
 [loggers]
 keys = root,sqlalchemy,alembic
